@@ -77,28 +77,17 @@ public class CheckWin {
 		// kolla kolumner för visst
 		// rotera arrayn
 
-		int n = board.length * board[0].length;
-		String[] temp = new String[n];
-		String [][] tempBoard = new String[3][3];
+		 int size = board.length;
+		 String[][] tempBoard = new String[size][size];
 
-		for (int i = 0, x = 0; i < board.length; i++) {
-			for (int j = 0; j < board[i].length; j++, x++) {
-				temp[x] = board[i][j];
-			}
-		}
-
-		for (int i = 0, x = n - tempBoard[i].length; i < tempBoard.length; i++, x += 1) {
-			for (int j = 0; j < tempBoard[i].length; j++, x -= tempBoard[i].length) {
-				tempBoard[i][j] = temp[x + i];
-			}
-			x = n - tempBoard[i].length - 1;
-		}
+		 for (int i = 0; i < size; ++i) 
+		  for (int j = 0; j < size; ++j) 
+		   tempBoard[i][j] = board[size - j - 1][i];
 
 		countX = 0; countO = 0;
 
 		for (int i = 0; i < tempBoard.length; i++) {
-			countX = 0;
-			countO = 0;
+			countX = 0; countO = 0;
 			for (int j = 0; j < tempBoard[i].length; j++) {
 				if (tempBoard[i][j].equals("X"))
 					countX++;
