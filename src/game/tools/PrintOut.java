@@ -2,10 +2,8 @@ package game.tools;
 
 public class PrintOut {
 
-	GameLogic logic;
-
-	public PrintOut(GameLogic gameLogic) {
-		logic = gameLogic;
+	public PrintOut() {
+		
 	}
 
 	public void printBoard(String[][] board) {

@@ -13,7 +13,7 @@ public class GameLogic {
 		coords = new int[2];
 	}
 
-	PrintOut print = new PrintOut(this);
+	PrintOut print = new PrintOut();
 	TakeInput input = new TakeInput(this);
 
 	public void run() {
@@ -26,6 +26,7 @@ public class GameLogic {
 			System.out.println("Spela igen? (j, n):");
 			if(sc.nextLine().equals("j")) play();
 			else {
+				MSG.lastGame(board);
 				MSG.printStats();
 				sc.close();
 				System.exit(0);

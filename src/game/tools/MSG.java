@@ -28,4 +28,22 @@ public class MSG {
 		System.out.println("================================\n");
 		System.out.println("Hejdå");
 	}
+	
+	static PrintOut print = new PrintOut();
+	
+	public static void lastGame(String[][] board) {
+		
+		System.out.println("================================\n");
+		System.out.println("Sista matchen var:\n");
+		System.out.println("================================\n");
+		
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				if(!board[i][j].equals("X") && !board[i][j].equals("O"))
+				board[i][j] = " ";
+			}
+		}
+		
+		print.printBoard(board);
+	}
 }
