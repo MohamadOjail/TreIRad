@@ -17,7 +17,7 @@ public class GameLogic {
 	TakeInput input = new TakeInput(this);
 
 	public void run() {
-		MSG.welcome(50);
+		MSG.welcome(80);
 		
 		play();
 		
