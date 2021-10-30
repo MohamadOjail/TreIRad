@@ -36,6 +36,7 @@ public class TakeInput {
 	}
 
 	private static void dator() {
+		System.out.println("Dator valde:");
 		Random rnd = new Random();
 		int x = rnd.nextInt(3);
 		int y = rnd.nextInt(3);	
